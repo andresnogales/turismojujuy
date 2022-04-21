@@ -1,12 +1,14 @@
 import { useContext, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import { singleArticle } from "../../actions/articleAction";
-import { ArticleContext } from "../../context/articleContext";
-import { LanguageContext } from "../../context/languageContext";
-import Map from "../Map/Map";
+import { singleArticle } from "../actions/articleAction";
+import { ArticleContext } from "../context/articleContext";
+import { LanguageContext } from "../context/languageContext";
+import Map from "../components/Map/Map";
 
 import classes from "./ArticleDetails.module.css";
+import Navbar from "../components/Navbar/Navbar";
+import Header from "../components/Header/Header";
 
 const ArticleDetails = (props) => {
   const { language, setLanguage } = useContext(LanguageContext);
@@ -44,11 +46,15 @@ const ArticleDetails = (props) => {
   );
   
   return (
-    <div className={classes["container"]}>
-      <article className={classes["entry-content"]}>
-        {language === "es" ? spanishContent : englishContent}
-      </article>
-      {article? <Map position={[article.latitude, article.longitude]} popup={article.address}></Map> : <p>Cargando mapa</p>} 
+    <div>
+      <Navbar />
+      {article && <Header picture={article.picture} label={language === "es"? article.title : article.titleEn}/>}
+      <div className={classes["container"]}>
+        <article className={classes["entry-content"]}>
+          {language === "es" ? spanishContent : englishContent}
+        </article>
+        {article? <Map position={[article.latitude, article.longitude]} popup={article.address}></Map> : <p>Cargando mapa</p>} 
+      </div>
     </div>
   );
 };
