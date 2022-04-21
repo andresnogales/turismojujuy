@@ -22,6 +22,7 @@ const ArticlesList = (props) => {
 
   useEffect(() => {
     dispatch(listArticlesByCategory(id));
+    window.scrollTo(0, 0);
   }, [dispatch]);
 
   const category = categoriesList.find((item) => item.id === Number(id));
@@ -29,10 +30,8 @@ const ArticlesList = (props) => {
   return (
     <div>
       <Navbar/>
-      <Header picture={category.picture}/>
+      <Header picture={category.picture} label={category.title[language]}/>
       <div className={classes["articles"]}>
-        <h1 className={classes["section-title"]}>{category.title[language]}</h1>
-
         <div className={classes["container"]}>
           {articles && articles.length === 0 ? (
             <p>Cargando...</p>

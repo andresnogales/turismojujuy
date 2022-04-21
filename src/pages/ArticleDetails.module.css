@@ -1,7 +1,11 @@
 .container{
-  display: flex;
   padding: 2rem;
-  margin-top: 4rem
+  gap: 2rem;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin: 4rem auto;
+  max-width: 2000px;
 }
 
 @media (max-width: 1000px) {
@@ -15,7 +19,6 @@
 
 .entry-content {
   background-color: #fff;
-  padding: 0 2rem;
   display: flex;
   justify-content: center;
 }
@@ -31,7 +34,7 @@
   font-size: 18px;
   line-height: 26px;
   font-weight: 400;
-  max-width: 75ch;
+  max-width: 150ch;
   text-align: justify;
   white-space: pre-line;
 }
