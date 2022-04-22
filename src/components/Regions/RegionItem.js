@@ -9,7 +9,7 @@ const RegionItem = (props) => {
         <h3 className={classes["item-title"]}>{name}</h3>
       </Link>
 
-      <p className={classes["description"]}>{description}</p>
+      <p className={classes["description"]}>{description[props.language]}</p>
     </div>
   );
 };

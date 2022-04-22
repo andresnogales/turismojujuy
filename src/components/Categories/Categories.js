@@ -4,14 +4,21 @@ import classes from "./Categories.module.css";
 import { categoriesList } from "../../data/categories";
 
 import Category from "./Category";
-const Categories = () => {
-  const onClickCategoryHandler = (idCategory) => {
-    const categorySelected = categoriesList.find((c) => c.id === idCategory);
-  };
+import { useContext } from "react";
+import { LanguageContext } from "../../context/languageContext";
+
+const Categories = (props) => {
+
+  const { language, setLanguage } = useContext(LanguageContext);
+
+  const sectionTitle = {
+    es: "Qué hacer en Jujuy",
+    en: "What to do in Jujuy"
+  }
 
   return (
     <section>
-      <h3 className={classes["section-title"]}>Qué hacer en Jujuy</h3>
+      <h3 className={classes["section-title"]}>{sectionTitle[language]}</h3>
 
       <div className={classes.container}>
         {categoriesList.map((category) => {
@@ -27,7 +34,6 @@ const Categories = () => {
                 title={category.title}
                 key={category.id}
                 id={category.id}
-                onClick={onClickCategoryHandler}
               ></Category>
             </Link>
           );

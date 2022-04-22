@@ -29,6 +29,7 @@
 
 .section-text p{
   color: #666;
+  white-space: pre-line;
 }
 
 .map{
