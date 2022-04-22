@@ -1,3 +1,4 @@
+import LoginForm from "../Login/LoginForm";
 import Widget from "../Widget/Widget";
 import classes from "./Sidebar.module.css";
 const Sidebar = () => {
@@ -21,6 +22,7 @@ const Sidebar = () => {
       btnLabel={"Ir a la descargas"}
       onClick={handleClick}/>
 
+    <LoginForm />
     </aside>
   );
 };
