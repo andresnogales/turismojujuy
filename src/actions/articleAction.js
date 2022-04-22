@@ -1,7 +1,6 @@
 import axios from "axios";
 
 export const singleArticle = (id) => async (dispatch) => {
-  console.log("Llamada al servidor, get article");
   try {
     const { data } = await axios.get("/api/article/" + id);
     dispatch({

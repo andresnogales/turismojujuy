@@ -3,11 +3,9 @@
   flex-direction: column;
   padding: 2rem;
   background-color: #fff;
-  box-shadow: 2px -2px 28px -17px rgba(0, 0, 0, 0.48);
-  -webkit-box-shadow: 2px -2px 28px -17px rgba(0, 0, 0, 0.48);
-  -moz-box-shadow: 2px -2px 28px -17px rgba(0, 0, 0, 0.48);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.05), 0 0 0 1px rgba(0,0,0,0.01);
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 6px;
 }
 
 .category__title {

@@ -19,7 +19,7 @@ const LanguageButton = () => {
 
   return (
     <div className={classes["language-switcher"]}>
-      <div className={classes["button"]} onClick={selectLanguageHandler}>
+      <div className={classes["button"]}>
         <GrLanguage />
       </div>
       <ul className={classes["sub-menu"]}>

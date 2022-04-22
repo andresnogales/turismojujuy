@@ -34,7 +34,7 @@ const Navbar = () => {
       id: 3,
       title: {
         es: "Destinos",
-        en: "Desntinations",
+        en: "Destinations",
       },
       submenu: regions,
     },
