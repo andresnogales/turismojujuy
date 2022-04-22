@@ -15,6 +15,7 @@
   display: flex;
   flex-wrap: wrap;
   background: #f2f4f5;
+  border-radius: 6px;
 }
 
 @media only screen and (max-width: 800px) {

@@ -1,8 +1,7 @@
 .section {
   margin-top: 2rem;
   margin-bottom: 2rem;
-  border-top: 1px solid #f2f4f5;
-  border-radius: 10px;
+  border-top: 1px solid #f2f4f5;  
 }
 
 .section-title {
@@ -10,14 +9,67 @@
   font-size: 24px;
   line-height: 32px;
   font-weight: 600;
-  margin: 2rem 0 2rem 0;
+  margin-bottom: 2rem;
 }
 
 .section p {
   margin-bottom: 1rem;
 }
 
-.section-description {
+.section-content {
   margin-top: 2rem;
   margin-bottom: 2rem;
+  display: flex;
+}
+
+.section-text {
+  width: 50%;
+  margin-right: 2rem;
+}
+
+.section-text p{
+  color: #666;
+}
+
+.map{
+  width: 50%;
+  border: none;
+}
+
+@media only screen and (max-width: 800px) {
+  .section-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .section-text{
+    width: 100%;
+  }
+
+  .map{
+    width: 100%;
+  }
+}
+
+.region-grid {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  }
+  
+.region-name{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.region-square{
+  height: 30px;
+  width: 30px;
+  margin-bottom: 1rem;
 }
