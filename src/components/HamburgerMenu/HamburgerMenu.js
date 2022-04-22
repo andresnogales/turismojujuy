@@ -1,7 +1,8 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import classes from "./HamburgerMenu.module.css";
 
-const HamburgerMenu = () => {
+const HamburgerMenu = (props) => {
   const [state, setState] = useState("");
   const toggleMobileMenu = () => {
     if (state === "") setState("open");
@@ -17,27 +18,32 @@ const HamburgerMenu = () => {
       <div className={classes["bar2"]}></div>
       <div className={classes["bar3"]}></div>
       <ul className={classes["mobile-menu"]}>
-        <li>
-          <a href="#">Inicio</a>
-        </li>
-        <li>
-          <a href="#">Qué hacer</a>
-        </li>
-        <li>
-          <a href="#">Destinos</a>
-        </li>
-        <li>
-          <a href="#">Servicios</a>
-        </li>
-        <li>
-          <a href="#">Información</a>
-        </li>
-        <li>
-          <a href="#">Institucional</a>
-        </li>
-        <li>
-          <a href="#">Blog</a>
-        </li>
+        {props.menu.map((item) => {
+            return(
+              <li key={item.id}>
+                 <Link className={classes["link"]} to={"/"}>
+                    <span>{item.title[props.language]}</span>
+                  </Link>
+                {item.submenu ? (
+                    <ul className={classes["sub-menu"]}>
+                      {item.submenu.map((subitem) => {
+                        return (
+                          <li key={item.submenu.id}>
+                            <Link className={classes["link"]} to={"/"}>
+                              {subitem.title
+                                ? subitem.title[props.language]
+                                : subitem}
+                            </Link>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  ) : (
+                    ""
+                  )}
+              </li>
+            )
+          })}
       </ul>
     </div>
   );

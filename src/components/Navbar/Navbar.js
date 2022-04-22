@@ -1,4 +1,4 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Logo from "../../assets/logo.png";
 import { IoIosArrowDown } from "react-icons/io";
 import HamburgerMenu from "../HamburgerMenu/HamburgerMenu";
@@ -7,9 +7,10 @@ import classes from "./Navbar.module.css";
 import { categoriesList } from "../../data/categories";
 import { useContext } from "react";
 import { LanguageContext } from "../../context/languageContext";
+import UserMenuButton from "../Login/UserMenuButton";
+import AuthService from "../../services/auth-service";
 
 const Navbar = () => {
-  let location = useLocation();
   const { language, setLanguage } = useContext(LanguageContext);
 
   const regions = ["Puna", "Quebrada", "Valles", "Yungas"];
@@ -70,9 +71,9 @@ const Navbar = () => {
       </div>
       <div className={classes["navbar__container"]}>
         <div className={classes["navbar__items-container"]}>
+        <ul className={classes["navbar__items"]}>
           {menu.map((item) => {
-            return (
-              <ul className={classes["navbar__items"]}>
+            return (              
                 <li className={classes["navbar__item-link"]} key={item.id}>
                   <Link className={classes["link"]} to={"/"}>
                     <span>{item.title[language]}</span>
@@ -95,14 +96,14 @@ const Navbar = () => {
                     ""
                   )}
                   {item.submenu ? <IoIosArrowDown /> : ""}
-                </li>
-              </ul>
+                </li>              
             );
           })}
+          </ul>
         </div>
-
         <LanguageButton />
-        <HamburgerMenu />
+        <UserMenuButton />
+        <HamburgerMenu menu={menu} language={language} />
       </div>
     </nav>
   );

@@ -46,7 +46,6 @@
   list-style: none;
   top: 104px;
   left: 0;
-  height: calc(100vh - 50px);
   width: 100%;
   background-color: #f9b342;
 }
@@ -62,4 +61,8 @@
 .mobile-menu a:visited {
   text-decoration: none;
   color: #000;
+}
+
+.sub-menu{
+  list-style: none;
 }

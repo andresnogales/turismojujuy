@@ -33,7 +33,8 @@ const LoginForm = () => {
                 setMessage("");
                 setUsername("");
                 setPassword("");
-                window.scrollTo(0, 0);            
+                window.scrollTo(0, 0);
+                window.location.reload();       
               },
               (error) => {
                 console.log(error);
