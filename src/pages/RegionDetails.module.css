@@ -1,0 +1,41 @@
+.container{
+    padding: 2rem;
+    gap: 2rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: 4rem auto;
+    max-width: 1600px;
+  }
+  
+  @media (max-width: 1000px) {
+    .container{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  
+  .entry-content {
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .entry-content h1 {
+    font-size: calc(15px + 3vw);
+    line-height: 1.2;
+    padding: 1rem 0;
+    text-align: center;
+  }
+  
+  .display-text {
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;
+    max-width: 80ch;
+    text-align: justify;
+    white-space: pre-line;
+  }
+  

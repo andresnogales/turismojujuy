@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 import { LanguageContext } from "../../context/languageContext";
 import RegionItem from "./RegionItem";
 import classes from "./RegionsList.module.css";
@@ -49,7 +50,7 @@ const RegionsList = () => {
   return (
     <div className={classes["container"]}>
       {regions.map((region) => {
-        return <RegionItem item={region} key={region.id} language={language}/>;
+        return <RegionItem item={region} id={region.id} key={region.id} language={language}/>;
       })}
     </div>
   );
