@@ -16,7 +16,7 @@ const ArticleItem = (props) => {
   const spanishCard = (
     <Card
       title={props.item.title}
-      picture={props.item.picture}
+      picture={"https://images.weserv.nl/?url=" + props.item.picture}
       tags={props.item.articleCategories.map((tag) => tag.title)}
     />
   );
@@ -24,7 +24,7 @@ const ArticleItem = (props) => {
   const englishCard = (
     <Card
       title={props.item.titleEn}
-      picture={props.item.picture}
+      picture={"https://images.weserv.nl/?url=" + props.item.picture}
       tags={props.item.articleCategories.map((tag) => tag.titleEn)}
     />
   );

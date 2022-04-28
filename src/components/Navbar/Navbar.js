@@ -95,7 +95,7 @@ const Navbar = () => {
                   ) : (
                     ""
                   )}
-                  {item.submenu ? <IoIosArrowDown /> : ""}
+                  {item.submenu && <IoIosArrowDown />}
                 </li>              
             );
           })}

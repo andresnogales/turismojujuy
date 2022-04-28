@@ -24,23 +24,21 @@ const HamburgerMenu = (props) => {
                  <Link className={classes["link"]} to={"/"}>
                     <span>{item.title[props.language]}</span>
                   </Link>
-                {item.submenu ? (
-                    <ul className={classes["sub-menu"]}>
-                      {item.submenu.map((subitem) => {
-                        return (
-                          <li key={item.submenu.id}>
-                            <Link className={classes["link"]} to={"/"}>
-                              {subitem.title
-                                ? subitem.title[props.language]
-                                : subitem}
-                            </Link>
-                          </li>
-                        );
-                      })}
-                    </ul>
-                  ) : (
-                    ""
-                  )}
+                {item.submenu && 
+                  <ul className={classes["sub-menu"]}>
+                  {item.submenu.map((subitem) => {
+                    return (
+                      <li key={item.submenu.id}>
+                        <Link className={classes["link"]} to={"/"}>
+                          {subitem.title
+                            ? subitem.title[props.language]
+                            : subitem}
+                        </Link>
+                      </li>
+                    );
+                  })}
+                </ul>
+                }
               </li>
             )
           })}

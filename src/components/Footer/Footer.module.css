@@ -1,5 +1,8 @@
 .footer {
   background-color: #161329;
+  left: 0;
+  width: 100%;
+  bottom: 0;
 }
 
 .footer-widgets {

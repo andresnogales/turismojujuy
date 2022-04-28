@@ -11,7 +11,7 @@ const Widget = (props) => {
         <p>
           {props.icon && <img
             className={classes["icon"]}
-            src={props.icon}
+            src={"https://images.weserv.nl/?url=" + props.icon}
             width="41"
           />}
           {props.content}

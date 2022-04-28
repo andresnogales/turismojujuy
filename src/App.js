@@ -1,15 +1,15 @@
-import { Fragment, useState } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { useState } from "react";
+import {HashRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Footer from "./components/Footer/Footer";
 import { ArticleContext } from "./context/articleContext";
 import { LanguageContext } from "./context/languageContext";
 import { useLanguage } from "./hooks/useLanguage";
 import ArticleDetails from "./pages/ArticleDetails";
-import ArticlesList from "./pages/ArticlesList";
 import CategoryDetails from "./pages/CategoryDetails";
 import Home from "./pages/Home";
 import RegionDetails from "./pages/RegionDetails";
+
 function App() {
   const [article, setArticle] = useState("");
   const articleValue = { article, setArticle };
@@ -18,7 +18,7 @@ function App() {
   const languageValue = { language, setLanguage };
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <LanguageContext.Provider value={languageValue}>
         <ArticleContext.Provider value={articleValue}>          
           <Routes>
@@ -30,7 +30,7 @@ function App() {
         </ArticleContext.Provider>
         <Footer></Footer>
       </LanguageContext.Provider>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

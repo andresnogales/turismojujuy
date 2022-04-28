@@ -5,6 +5,9 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
 import store from "./store";
+import axios from 'axios';
+
+axios.defaults.baseURL = 'https://turismo-jujuy.herokuapp.com';
 
 ReactDOM.render(
   <Provider store={store}>

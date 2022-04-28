@@ -1,5 +1,4 @@
 import Categories from "../components/Categories/Categories";
-import Hero from "../assets/hero.png"
 import Header from "../components/Header/Header";
 import Navbar from "../components/Navbar/Navbar";
 import Regions from "../components/Regions/Regions";
@@ -20,7 +19,7 @@ const Home = () => {
   return (
     <div>
       <Navbar />
-      <Header picture={Hero} />   
+      <Header />   
       <SearchButton />
       <div className="wrapper">      
         <main className="main">
