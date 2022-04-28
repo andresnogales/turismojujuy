@@ -1,4 +1,4 @@
-import ArticleItem from "../components/Articles/ArticleItem";
+import ArticleItem from "./ArticleItem";
 import classes from "./ArticlesList.module.css";
 
 const ArticlesList = (props) => {

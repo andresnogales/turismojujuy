@@ -7,7 +7,8 @@ import { useDispatch, useSelector } from "react-redux";
 
 import classes from "./RegionDetails.module.css";
 import { LanguageContext } from "../context/languageContext";
-import ArticlesList from "./ArticlesList";
+import ArticlesList from "../components/Articles/ArticlesList";
+
 
 const RegionDetails = (props) => {
     const[region, setRegion] = useState("");

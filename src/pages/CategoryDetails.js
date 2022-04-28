@@ -7,8 +7,8 @@ import { getCategoryWithArticles } from "../actions/categoryAction";
 import Navbar from "../components/Navbar/Navbar";
 import Header from "../components/Header/Header";
 import { LanguageContext } from "../context/languageContext";
+import ArticlesList from "../components/Articles/ArticlesList";
 
-import ArticlesList from "./ArticlesList";
 
 const CategoryDetails = () => {
     const { id } = useParams();

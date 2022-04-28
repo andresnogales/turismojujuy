@@ -20,15 +20,19 @@ function App() {
   return (
     <HashRouter>
       <LanguageContext.Provider value={languageValue}>
-        <ArticleContext.Provider value={articleValue}>          
-          <Routes>
-            <Route path="/article/:id" element={<ArticleDetails />} />
-            <Route path="/cat/:id" element={<CategoryDetails />} />
-            <Route path="/region/:id" element={<RegionDetails />} />
-            <Route path="/" exact={true} element={<Home />} />
-          </Routes>
-        </ArticleContext.Provider>
-        <Footer></Footer>
+        <div className="wrapper">      
+          <div className="main">  
+            <ArticleContext.Provider value={articleValue}>          
+              <Routes>
+                <Route path="/article/:id" element={<ArticleDetails />} />
+                <Route path="/cat/:id" element={<CategoryDetails />} />
+                <Route path="/region/:id" element={<RegionDetails />} />
+                <Route path="/" exact={true} element={<Home />} />
+              </Routes>
+            </ArticleContext.Provider>
+          </div>
+          <Footer></Footer>
+        </div>
       </LanguageContext.Provider>
     </HashRouter>
   );

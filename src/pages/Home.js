@@ -7,6 +7,8 @@ import Sidebar from "../components/Sidebar/Sidebar";
 import { useContext } from "react";
 import { LanguageContext } from "../context/languageContext";
 
+import classes from "./Home.module.css";
+
 const Home = () => {
 
   const { language, setLanguage } = useContext(LanguageContext);
@@ -21,9 +23,9 @@ const Home = () => {
       <Navbar />
       <Header />   
       <SearchButton />
-      <div className="wrapper">      
-        <main className="main">
-          <h1 className="site-description">
+      <div className={classes["wrapper"]}>      
+        <main className={classes["main"]}>  
+          <h1 className={classes["site-description"]}>
             {description[language]}
           </h1>
           <Categories/>
