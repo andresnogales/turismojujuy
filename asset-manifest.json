@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/turismojujuy/static/css/main.cbdcfcaa.css",
-    "main.js": "/turismojujuy/static/js/main.b27cf801.js",
+    "main.js": "/turismojujuy/static/js/main.a4c2b1cc.js",
     "static/js/787.cda612ba.chunk.js": "/turismojujuy/static/js/787.cda612ba.chunk.js",
     "static/media/valles.png": "/turismojujuy/static/media/valles.65b49c9d0c5b6acba5ee.png",
     "static/media/yungas.png": "/turismojujuy/static/media/yungas.0d26e8be5490a7058587.png",
@@ -11,11 +11,11 @@
     "static/media/logo.png": "/turismojujuy/static/media/logo.4dbd6f30d05424660ee6.png",
     "index.html": "/turismojujuy/index.html",
     "main.cbdcfcaa.css.map": "/turismojujuy/static/css/main.cbdcfcaa.css.map",
-    "main.b27cf801.js.map": "/turismojujuy/static/js/main.b27cf801.js.map",
+    "main.a4c2b1cc.js.map": "/turismojujuy/static/js/main.a4c2b1cc.js.map",
     "787.cda612ba.chunk.js.map": "/turismojujuy/static/js/787.cda612ba.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cbdcfcaa.css",
-    "static/js/main.b27cf801.js"
+    "static/js/main.a4c2b1cc.js"
   ]
 }
